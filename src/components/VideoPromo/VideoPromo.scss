@@ -40,7 +40,7 @@
         top: 28px;
       }
       @media (max-width: 425px) {
-        top: 20px;
+        top: 25px;
       }
       video {
         max-width: 778px;
@@ -95,9 +95,27 @@
           height: 100%;
         }
         @media (max-width: 425px) {
-          max-width: 240px;
+          max-width: 302px;
           width: 100%;
-          max-height: 115px;
+          max-height: 155px;
+          height: 100%;
+        }
+        @media (max-width: 400px) {
+          max-width: 290px;
+          width: 100%;
+          max-height: 140px;
+          height: 100%;
+        }
+        @media (max-width: 386px) {
+          max-width: 282px;
+          width: 100%;
+          max-height: 135px;
+          height: 100%;
+        }
+        @media (max-width: 386px) {
+          max-width: 270px;
+          width: 100%;
+          max-height: 130px;
           height: 100%;
         }
       }

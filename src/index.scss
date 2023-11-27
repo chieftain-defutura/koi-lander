@@ -69,6 +69,8 @@ button:disabled {
 h1 {
   font-size: 40px;
   color: var(--primaryText);
+  font-family: var(--font-Exima);
+  font-weight: 400;
   @media (max-width: 1024px) {
     font-size: 32px;
   }

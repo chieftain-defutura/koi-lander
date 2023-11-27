@@ -18,7 +18,9 @@ const Footer: React.FC = () => {
         <div className="mx">
           <div className="footer-container">
             <div className="footer-border-bg-img">
-              <FooterBgImg />
+              <div className="footer-background-image">
+                <FooterBgImg />
+              </div>
 
               <div className="footer-content">
                 <div className="footer-logo">
