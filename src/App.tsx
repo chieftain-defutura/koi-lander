@@ -5,6 +5,7 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import ResponsiveHeader from "./components/ResponsiveHeader";
 import AboutUs from "./components/Aboutus";
+import VideoPromo from "./components/VideoPromo";
 
 const App: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -19,6 +20,7 @@ const App: React.FC = () => {
       {open && <ResponsiveHeader setOpen={setOpen} />}
       <Hero open={open} />
       <About />
+      <VideoPromo />
       <AboutUs />
       <Footer />
     </div>

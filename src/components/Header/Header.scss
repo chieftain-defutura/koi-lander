@@ -28,6 +28,7 @@
       .koi-logo {
         svg {
           width: 100%;
+          cursor: pointer;
           @media (max-width: 750px) {
             width: 129px;
             height: 70px;
@@ -52,6 +53,7 @@
       .header-button {
         img {
           width: 100%;
+          cursor: pointer;
           @media (max-width: 750px) {
             width: 108px;
             height: 49px;

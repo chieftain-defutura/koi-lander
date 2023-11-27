@@ -12,3 +12,4 @@ declare module "*.png";
 declare module "*.pdf";
 declare module "*.html";
 declare module "*.jpeg";
+declare module "*.mp4";
