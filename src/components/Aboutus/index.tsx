@@ -93,7 +93,7 @@ const Card: React.FC<ICard> = ({ Data }) => {
         <div>
           <img
             src={isHovered ? SecondCircle : FirstCircle}
-            alt="Image"
+            alt=""
             className="transition-image"
           />
         </div>
