@@ -11,8 +11,7 @@ import ECafe from "../../assets/images/ecafe.png";
 import ClubPoker from "../../assets/images/clubpoker.png";
 import Lounge from "../../assets/images/lounge.png";
 import SportsDeck from "../../assets/images/sportsdeck.png";
-
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 interface IHero {
   open: boolean;
