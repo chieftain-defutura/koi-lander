@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import ResponsiveHeader from "./components/ResponsiveHeader";
+import AboutUs from "./components/Aboutus";
 
 const App: React.FC = () => {
   const [open, setOpen] = useState(false);
@@ -12,13 +13,13 @@ const App: React.FC = () => {
       setOpen(false);
     }
   }, [open]);
-  console.log(open);
   return (
     <div>
       <Header setOpen={setOpen} />
       {open && <ResponsiveHeader setOpen={setOpen} />}
       <Hero open={open} />
       <About />
+      <AboutUs />
       <Footer />
     </div>
   );

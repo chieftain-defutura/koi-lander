@@ -11,8 +11,6 @@ import ECafe from "../../assets/images/ecafe.png";
 import ClubPoker from "../../assets/images/clubpoker.png";
 import Lounge from "../../assets/images/lounge.png";
 import SportsDeck from "../../assets/images/sportsdeck.png";
-// import BorderDown from "../../assets/images/borderDown.png";
-// import BorderTop from "../../assets/images/borderTop.png";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
@@ -26,9 +24,6 @@ const Hero: React.FC<IHero> = ({ open }) => {
     <div style={{ marginTop: open ? "10px" : "115px" }}>
       <div className="mx">
         <div className="hero-wrapper">
-          {/* <div className="border">
-            <img src={BorderDown} alt="" />
-          </div> */}
           <Swiper
             spaceBetween={30}
             centeredSlides={true}
@@ -36,7 +31,7 @@ const Hero: React.FC<IHero> = ({ open }) => {
               delay: 2500,
               disableOnInteraction: false,
             }}
-            modules={[Autoplay]}
+            modules={[Autoplay, Pagination]}
             className="mySwiper"
           >
             {Images.map((slide, index) => (
@@ -47,9 +42,6 @@ const Hero: React.FC<IHero> = ({ open }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-          {/* <div className="border">
-            <img src={BorderTop} alt="" />
-          </div> */}
         </div>
       </div>
     </div>

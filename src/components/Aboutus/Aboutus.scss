@@ -1,0 +1,12 @@
+.aboutus-container {
+  padding: 64px;
+  @media (max-width: 550px) {
+    padding: 24px;
+  }
+  .aboutus-wrapper {
+    text-align: center;
+    h1 {
+      padding-bottom: 15px;
+    }
+  }
+}
