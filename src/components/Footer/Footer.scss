@@ -9,6 +9,7 @@
       align-items: center;
       justify-content: center;
       position: relative;
+      transition: all 0.3s ease-in-out;
 
       svg {
         max-width: 846px;
@@ -91,12 +92,12 @@
       }
     }
     &:hover {
+      transform: scale(1.01);
       .footer-border-bg-img {
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
-
         .footer-background-image {
           svg {
             max-width: 846px;
