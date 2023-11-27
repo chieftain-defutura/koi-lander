@@ -1,0 +1,89 @@
+.contact-us {
+  padding: 32px 64px;
+  @media (max-width: 768px) {
+    padding: 18px 32px;
+  }
+  .contact-us-container {
+    .close-icon {
+      @media (max-width: 547px) {
+        margin-right: -12px;
+        margin-top: -4px;
+      }
+    }
+    .contact-us-content {
+      input {
+        background: transparent;
+        padding: 16px 24px;
+        border: 1px solid #252525;
+        width: 100%;
+        font-size: 16px;
+        color: var(--primaryText);
+        font-family: var(--font-medium);
+      }
+
+      .grid-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        padding-top: 32px;
+        @media (max-width: 547px) {
+          grid-template-columns: 1fr;
+          padding-top: 0px;
+        }
+      }
+      .drop-down-wrapper {
+        position: relative;
+        padding: 32px 0;
+
+        .flex-item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          padding: 16px 24px;
+          border: 1px solid #252525;
+        }
+        .select-drop-down {
+          background: #252525;
+          box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+          border-radius: 5px;
+          transition: all 0.5s ease-out;
+          margin-top: 8px;
+
+          p {
+            font-size: 20px;
+            font-family: var(--font-medium);
+            color: #444444;
+            padding: 14px 16px;
+            cursor: pointer;
+            transition: all 0.5s ease-out;
+            &:hover {
+              color: var(--primaryText);
+            }
+          }
+        }
+      }
+      .submit-btn {
+        border: 1px solid #fff;
+        box-shadow: 0px 0px 10px 0px #00d0ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 16px 24px;
+        margin-top: 32px;
+        @media (max-width: 547px) {
+          margin-bottom: 32px;
+        }
+        button {
+          color: #fff;
+          font-size: 16px;
+          background: transparent;
+          outline: none;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
