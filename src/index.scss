@@ -1,4 +1,3 @@
-
 *,
 ::after,
 ::before {
@@ -11,91 +10,102 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  color: var(--text-primary);
+  background: var(--background);
+  color: var(--primaryText);
   transition: all 0.3s linear;
 }
-
-
 .mx {
-    max-width: 1800px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  
-  a {
-    text-decoration: none;
-    color: var(--text-primary);
-  }
-  button:disabled {
-    cursor: no-drop;
-  }
-  
+  max-width: 1800px;
+  width: 100%;
+  margin: 0 auto;
+}
 
-:root{
-    --background:'#0A0A0A',
-    --headerBackground:'rgba(0,0,0,0.5)',
-    --primaryText:'#fff',
-    --secondaryText:'#777',
-    --font-medium:"Gilroy-Medium",
-    --font-bold:'Gilroy-Bold',
-    --font-semibold:'Gilroy-SemiBold',
-    --font-light:'Gilroy-Light'
+a {
+  text-decoration: none;
+  color: var(--primaryText);
+}
+button:disabled {
+  cursor: no-drop;
+}
+
+:root {
+  --background: #0a0a0a;
+  --headerBackground: rgba(0, 0, 0, 0.5);
+  --primaryText: #fff;
+  --secondaryText: #777;
+  --font-medium: "Gilroy-Medium";
+  --font-bold: "Gilroy-Bold";
+  --font-semibold: "Gilroy-SemiBold";
+  --font-light: "Gilroy-Light";
+  --font-regular: "Gilroy-Regular";
+  --font-Exima: "Exima-Geometric";
 }
 
 @font-face {
-    font-family: "Gilroy-Bold";
-    src: url("../src/assets/fonts/Gilroy-Bold.ttf");
-  }
-  @font-face {
-    font-family: "Gilroy-Medium";
-    src: url("../src/assets/fonts/Gilroy-Medium.ttf");
-  }
-  @font-face {
-    font-family: "Gilroy-SemiBold";
-    src: url("../src/assets/fonts/Gilroy-SemiBold.ttf");
-  }
-  @font-face {
-    font-family: "Gilroy-Light";
-    src: url("../src/assets/fonts/Gilroy-Light.ttf");
-  }
-  
-h1{
-font-size: 40px;
-color:var(--primaryText);
-@media (max-width:500px) {
-    font-size: 24px;  
+  font-family: "Gilroy-Bold";
+  src: url("../src/assets/fonts/Gilroy-Bold.ttf");
 }
+@font-face {
+  font-family: "Gilroy-Medium";
+  src: url("../src/assets/fonts/Gilroy-Medium.ttf");
 }
-h2{
-    font-size: 32px;
-    color: var(--primaryText);
-    font-family: var(--font-semibold);
-    @media (max-width:500px) {
-        font-size: 20px;  
-    }
+@font-face {
+  font-family: "Gilroy-SemiBold";
+  src: url("../src/assets/fonts/Gilroy-SemiBold.ttf");
 }
-h3{
-    font-size: 20px;
-    color: var(--primaryText);
-    font-family: var(--font-medium);
-    @media (max-width:500px) {
-        font-size: 14px;  
-    }
+@font-face {
+  font-family: "Gilroy-Light";
+  src: url("../src/assets/fonts/Gilroy-Light.ttf");
 }
-h4{
-    font-size: 14px;
-    color: var(--secondaryText);
-    font-family: var(--font-medium);
-    @media (max-width:500px) {
-        font-size: 12px;  
-    }
+@font-face {
+  font-family: "Gilroy-Regular";
+  src: url("../src/assets/fonts/Gilroy-Regular.ttf");
+}
+@font-face {
+  font-family: "Exima-Geometric";
+  src: url("../src/assets/fonts/Exima\ Geometric.ttf");
 }
 
-p{
-    font-size: 16px;
-    color: var(--secondaryText);
-    font-family: var(--font-medium);
-    @media (max-width:500px) {
-        font-size: 12px;  
-    }
+h1 {
+  font-size: 40px;
+  color: var(--primaryText);
+  @media (max-width: 1024px) {
+    font-size: 32px;
+  }
+  @media (max-width: 500px) {
+    font-size: 24px;
+  }
+}
+h2 {
+  font-size: 32px;
+  color: var(--primaryText);
+  font-family: var(--font-semibold);
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
+}
+h3 {
+  font-size: 20px;
+  color: var(--primaryText);
+  font-family: var(--font-medium);
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
+}
+h4 {
+  font-size: 14px;
+  color: var(--secondaryText);
+  font-family: var(--font-medium);
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
+}
+
+p {
+  font-size: 16px;
+  color: var(--secondaryText);
+  font-family: var(--font-medium);
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
 }
