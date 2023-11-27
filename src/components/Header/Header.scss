@@ -1,0 +1,63 @@
+.header-container {
+  background-color: "transparent";
+  backdrop-filter: blur(12px);
+  padding: 16px 64px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+  @media (max-width: 750px) {
+    padding: 16px 24px;
+  }
+  .header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .logo {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .menu {
+        display: none;
+        @media (max-width: 550px) {
+          display: flex;
+        }
+      }
+      .koi-logo {
+        svg {
+          width: 100%;
+          @media (max-width: 750px) {
+            width: 129px;
+            height: 70px;
+          }
+        }
+      }
+    }
+    .header-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      .header-link {
+        a {
+          padding-right: 32px;
+        }
+        @media (max-width: 550px) {
+          display: none;
+        }
+      }
+      .header-button {
+        img {
+          width: 100%;
+          @media (max-width: 750px) {
+            width: 108px;
+            height: 49px;
+          }
+        }
+      }
+    }
+  }
+}
