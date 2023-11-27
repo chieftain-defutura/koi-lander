@@ -23,6 +23,7 @@ body {
 a {
   text-decoration: none;
   color: var(--primaryText);
+  font-size: 20px;
 }
 button:disabled {
   cursor: no-drop;
@@ -39,6 +40,11 @@ button:disabled {
   --font-light: "Gilroy-Light";
   --font-regular: "Gilroy-Regular";
   --font-Exima: "Exima-Geometric";
+}
+
+.drop-down-icon.rotate {
+  transform: rotate(-180deg);
+  transition: all 0.5s ease-out;
 }
 
 @font-face {
