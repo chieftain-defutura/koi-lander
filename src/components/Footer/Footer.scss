@@ -91,15 +91,13 @@
         }
       }
     }
-
     .footer-border-bg-img {
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-
-      // transform: scale(1.01);
       &:hover {
+        transform: scale(1.01);
         .footer-background-image {
           svg {
             max-width: 846px;

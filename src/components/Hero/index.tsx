@@ -19,8 +19,14 @@ interface IHero {
 
 const Images = [Penthahouse, CasinoRoyel, ECafe, ClubPoker, Lounge, SportsDeck];
 const Hero: React.FC<IHero> = ({ open }) => {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  };
   return (
-    <div style={{ marginTop: open ? "10px" : "115px" }}>
+    <div style={{ marginTop: open ? "220px" : "117px" }}>
       <div className="mx">
         <div className="hero-wrapper">
           <Swiper
@@ -30,6 +36,7 @@ const Hero: React.FC<IHero> = ({ open }) => {
               delay: 2500,
               disableOnInteraction: false,
             }}
+            pagination={pagination}
             modules={[Autoplay, Pagination]}
             className="mySwiper"
           >

@@ -10,7 +10,11 @@ interface IResponsiveHeader {
 const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen }) => {
   return (
     <div className="responsive-header-link">
-      <div className="close" onClick={() => setOpen(false)}>
+      <div
+        className="close"
+        onClick={() => setOpen(false)}
+        style={{ cursor: "pointer" }}
+      >
         <CloceIcon />
       </div>
       <div className="link">

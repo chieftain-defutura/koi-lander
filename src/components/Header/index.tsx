@@ -18,7 +18,11 @@ const Header: React.FC<IHeader> = ({ setOpen }) => {
       <div className="mx">
         <div className="header-wrapper">
           <div className="logo">
-            <div className="menu" onClick={() => setOpen(true)}>
+            <div
+              className="menu"
+              onClick={() => setOpen(true)}
+              style={{ cursor: "pointer" }}
+            >
               <Hamburger />
             </div>
             <div className="koi-logo">
