@@ -98,20 +98,9 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
                       </div>
                     )}
                   </div>
-                  <Field
-                    as="textarea"
-                    name="message"
-                    placeholder="Message"
-                    style={{
-                      backgroundColor: "transparent",
-                      border: "1px solid #252525",
-                      width: "100%",
-                      padding: "16px 24px",
-                      color: "#fff",
-                      fontSize: "16px",
-                      fontFamily: "Gilroy-Medium",
-                    }}
-                  />
+                  <div className="textarea-input">
+                    <Field as="textarea" name="message" placeholder="Message" />
+                  </div>
                   <div className="submit-btn">
                     <button>Submit</button>
                   </div>

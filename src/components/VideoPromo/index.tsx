@@ -13,7 +13,7 @@ const VideoPromo: React.FC = () => {
         <div className="video-promo-container">
           <img src={PromoBorderImg} alt="" />
           <div className="promo-video">
-            <video src={PromoVideo} loop controls autoPlay></video>
+            <video src={PromoVideo} loop controls autoPlay={false}></video>
           </div>
         </div>
       </div>

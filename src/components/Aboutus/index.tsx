@@ -90,8 +90,14 @@ const Card: React.FC<ICard> = ({ Data }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div className="founders">
-        <div className="">
-          <div style={{ width: "300px", height: "300px" }}>
+        <div>
+          <div
+            style={{
+              width: "300px",
+              height: "300px",
+              transition: "all 0.1s ease-out",
+            }}
+          >
             <img
               src={FirstCircle}
               alt=""
@@ -104,6 +110,7 @@ const Card: React.FC<ICard> = ({ Data }) => {
                 width: "100%",
                 height: "100%",
                 objectFit: "contain",
+                transition: "all 0.1s ease-out",
               }}
             />
           </div>
