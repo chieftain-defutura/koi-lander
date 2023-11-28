@@ -1,9 +1,17 @@
 .responsive-header-link {
-  position: fixed;
-  z-index: 2000;
-  width: 100%;
-  top: 0;
   background-color: var(--background);
+  position: fixed;
+  top: -400%;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: top 0.3s ease-in-out;
+
+  &.active {
+    top: 0;
+  }
+
   @media (min-width: 550px) {
     display: none;
   }
@@ -15,11 +23,9 @@
   }
   .border {
     border-bottom: 1px solid #252525;
-    // max-width: 280px;
     width: 85%;
     position: absolute;
     top: 68px;
-    // left: 70px;
     margin: 0 30px;
   }
   .link {

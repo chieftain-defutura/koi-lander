@@ -1,18 +1,14 @@
 import React, { useState } from "react";
-import "./Header.scss";
 import { ReactComponent as HeaderLogo } from "../../assets/logo/header-logo.svg";
 import { ReactComponent as Hamburger } from "../../assets/icons/hamburger-menu.svg";
 import HeaderButton from "../../assets/images/Button.png";
-import LayoutModule from "../layoutModule";
 import ContactUs from "../ContactUs";
-import UnionTop from "../../assets/images/Union-top.png";
-import UnionBottom from "../../assets/images/Union-bottom.png";
+import ResponsiveHeader from "../ResponsiveHeader";
+import "./Header.scss";
 
-interface IHeader {
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-const Header: React.FC<IHeader> = ({ setOpen }) => {
+const Header: React.FC = () => {
   const [active, setActive] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <div className="header-container">
       <div className="mx">
@@ -48,11 +44,10 @@ const Header: React.FC<IHeader> = ({ setOpen }) => {
         </div>
         {active && (
           <div className="union-top-img-container">
-            <LayoutModule handleToggle={() => setActive(false)}>
-              <ContactUs setActive={setActive} />
-            </LayoutModule>
+            <ContactUs setActive={setActive} />
           </div>
         )}
+        <ResponsiveHeader setOpen={setOpen} open={open} />
       </div>
     </div>
   );

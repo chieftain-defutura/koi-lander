@@ -33,80 +33,89 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
   };
 
   return (
-    <div className="contact-us">
-      <div className="mx">
-        <div className="contact-us-container">
-          <div className="close-icon" onClick={() => setActive(false)}>
-            <CloseIcon />
-          </div>
+    <div className="modal-wrapper">
+      <div className="modal-overlay" />
+      <div className="modal-container">
+        <div className="contact-us">
+          <div className="contact-us-container">
+            <div className="close-icon" onClick={() => setActive(false)}>
+              <CloseIcon />
+            </div>
 
-          <div className="contact-us-content">
-            <Formik
-              initialValues={initialValues}
-              validationSchema={validationSchema}
-              onSubmit={(values: any) => console.log(values)}
-            >
-              {() => (
-                <Form>
-                  <div className="grid-item">
-                    <div>
-                      <Field name="name" placeholder="Name" type="text" />
-                    </div>
-                    <div>
-                      <Field name="email" placeholder="E-mail" type="email" />
-                      <ErrorMessage
-                        className="errorMsg"
-                        component="div"
-                        name="email"
-                      />
-                    </div>
-                  </div>
-                  <div className="drop-down-wrapper">
-                    <div className="flex-item" onClick={handleToggle}>
-                      <p>{selectedSubject ? selectedSubject : "Subject"}</p>
-                      <ChevronDown
-                        className={`drop-down-icon ${isActive ? "rotate" : ""}`}
-                        onClick={handleToggle}
-                      />
-                    </div>
-                    {isActive && (
-                      <div className="select-drop-down">
-                        <p
-                          onClick={() =>
-                            handleSubjectSelect("Partnership related")
-                          }
-                        >
-                          Partnership related
-                        </p>
-                        <p
-                          onClick={() =>
-                            handleSubjectSelect("Recruitment related")
-                          }
-                        >
-                          Recruitment related
-                        </p>
-                        <p
-                          onClick={() =>
-                            handleSubjectSelect("Investment related")
-                          }
-                        >
-                          Investment related
-                        </p>
-                        <p onClick={() => handleSubjectSelect("Others")}>
-                          Others
-                        </p>
+            <div className="contact-us-content">
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={(values: any) => console.log(values)}
+              >
+                {() => (
+                  <Form>
+                    <div className="grid-item">
+                      <div>
+                        <Field name="name" placeholder="Name" type="text" />
                       </div>
-                    )}
-                  </div>
-                  <div className="textarea-input">
-                    <Field as="textarea" name="message" placeholder="Message" />
-                  </div>
-                  <div className="submit-btn">
-                    <button>Submit</button>
-                  </div>
-                </Form>
-              )}
-            </Formik>
+                      <div>
+                        <Field name="email" placeholder="E-mail" type="email" />
+                        <ErrorMessage
+                          className="errorMsg"
+                          component="div"
+                          name="email"
+                        />
+                      </div>
+                    </div>
+                    <div className="drop-down-wrapper">
+                      <div className="flex-item" onClick={handleToggle}>
+                        <p>{selectedSubject ? selectedSubject : "Subject"}</p>
+                        <ChevronDown
+                          className={`drop-down-icon ${
+                            isActive ? "rotate" : ""
+                          }`}
+                          onClick={handleToggle}
+                        />
+                      </div>
+                      {isActive && (
+                        <div className="select-drop-down">
+                          <p
+                            onClick={() =>
+                              handleSubjectSelect("Partnership related")
+                            }
+                          >
+                            Partnership related
+                          </p>
+                          <p
+                            onClick={() =>
+                              handleSubjectSelect("Recruitment related")
+                            }
+                          >
+                            Recruitment related
+                          </p>
+                          <p
+                            onClick={() =>
+                              handleSubjectSelect("Investment related")
+                            }
+                          >
+                            Investment related
+                          </p>
+                          <p onClick={() => handleSubjectSelect("Others")}>
+                            Others
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                    <div className="textarea-input">
+                      <Field
+                        as="textarea"
+                        name="message"
+                        placeholder="Message"
+                      />
+                    </div>
+                    <div className="submit-btn">
+                      <button>Submit</button>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
+            </div>
           </div>
         </div>
       </div>
