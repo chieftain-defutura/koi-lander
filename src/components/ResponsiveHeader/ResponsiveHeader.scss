@@ -4,6 +4,7 @@
   width: 100%;
   top: 0;
   background-color: var(--background);
+  transition: all 0.3s ease-in-out;
   @media (min-width: 550px) {
     display: none;
   }
