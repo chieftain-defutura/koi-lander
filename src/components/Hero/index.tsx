@@ -13,12 +13,8 @@ import Lounge from "../../assets/images/lounge.png";
 import SportsDeck from "../../assets/images/sportsdeck.png";
 import { Autoplay, Pagination } from "swiper/modules";
 
-interface IHero {
-  open: boolean;
-}
-
 const Images = [Penthahouse, CasinoRoyel, ECafe, ClubPoker, Lounge, SportsDeck];
-const Hero: React.FC<IHero> = ({ open }) => {
+const Hero: React.FC = () => {
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
@@ -26,7 +22,7 @@ const Hero: React.FC<IHero> = ({ open }) => {
     },
   };
   return (
-    <div style={{ marginTop: open ? "270px" : "117px" }}>
+    <div style={{ marginTop: "117px" }}>
       <div className="mx">
         <div className="hero-wrapper">
           <Swiper

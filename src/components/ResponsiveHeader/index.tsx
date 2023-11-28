@@ -9,12 +9,17 @@ import ContactUs from "../ContactUs";
 
 interface IResponsiveHeader {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  open: boolean;
 }
 
-const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen }) => {
+const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen, open }) => {
   const [active, setActive] = useState(false);
   return (
-    <div className="responsive-header-link">
+    <div
+      className={
+        open ? "responsive-header-link active" : "responsive-header-link"
+      }
+    >
       <div
         className="close"
         onClick={() => setOpen(false)}
@@ -24,13 +29,13 @@ const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen }) => {
       </div>
       <div className="border"></div>
       <div className="link">
-        <div>
+        <div onClick={() => setOpen(false)}>
           <a href="/">Home</a>
         </div>
-        <div>
+        <div onClick={() => setOpen(false)}>
           <a href="/">About us</a>
         </div>
-        <div onClick={() => setActive(true)}>
+        <div onClick={() => [setActive(true), setOpen(false)]}>
           <p>Contact us</p>
         </div>
       </div>

@@ -7,12 +7,11 @@ import LayoutModule from "../layoutModule";
 import ContactUs from "../ContactUs";
 import UnionTop from "../../assets/images/Union-top.png";
 import UnionBottom from "../../assets/images/Union-bottom.png";
+import ResponsiveHeader from "../ResponsiveHeader";
 
-interface IHeader {
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
-}
-const Header: React.FC<IHeader> = ({ setOpen }) => {
+const Header: React.FC = () => {
   const [active, setActive] = useState(false);
+  const [open, setOpen] = useState(false);
   return (
     <div className="header-container">
       <div className="mx">
@@ -59,6 +58,7 @@ const Header: React.FC<IHeader> = ({ setOpen }) => {
             </div>
           </div>
         )}
+        <ResponsiveHeader setOpen={setOpen} open={open} />
       </div>
     </div>
   );

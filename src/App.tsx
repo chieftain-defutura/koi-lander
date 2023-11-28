@@ -8,17 +8,10 @@ import AboutUs from "./components/Aboutus";
 import VideoPromo from "./components/VideoPromo";
 
 const App: React.FC = () => {
-  const [open, setOpen] = useState(false);
-  useEffect(() => {
-    if (window.innerWidth >= 550) {
-      setOpen(false);
-    }
-  }, [open]);
   return (
     <div>
-      <Header setOpen={setOpen} />
-      {open && <ResponsiveHeader setOpen={setOpen} />}
-      <Hero open={open} />
+      <Header />
+      <Hero />
       <About />
       <VideoPromo />
       <AboutUs />
