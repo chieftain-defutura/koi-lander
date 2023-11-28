@@ -10,6 +10,7 @@
   z-index: 1000;
   padding: 0 48px;
   transition: all 0.5s ease-in-out;
+  overflow: hidden;
   @media (max-width: 547px) {
     padding: 0 16px;
   }
@@ -100,6 +101,9 @@
       .contact-us-container {
         overflow-y: auto;
         overflow-x: hidden;
+        &::-webkit-scrollbar {
+          width: 0px;
+        }
         @media (max-width: 547px) {
           height: 440px;
         }
