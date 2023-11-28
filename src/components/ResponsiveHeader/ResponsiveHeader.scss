@@ -61,33 +61,43 @@
       justify-content: center;
       margin-left: 8px;
       @media (max-width: 547px) {
-        top: -240px;
+        top: -182px;
       }
-      @media (max-width: 378px) {
-        top: -230px;
+      @media (max-width: 510px) {
+        top: -178px;
       }
-      @media (max-width: 387px) {
-        top: -232px;
+      @media (max-width: 470px) {
+        top: -170px;
       }
+      // @media (max-width: 378px) {
+      //   top: -230px;
+      // }
+      // @media (max-width: 387px) {
+      //   top: -232px;
+      // }
 
       img {
         max-width: 1010px;
         width: 100%;
         margin: 0 auto;
         @media (max-width: 547px) {
-          max-width: 415px;
+          max-width: 500px;
           margin-left: 4px;
         }
-        @media (max-width: 420px) {
-          max-width: 370px;
+        @media (max-width: 510px) {
+          max-width: 460px;
           margin-left: 4px;
         }
-        @media (max-width: 378px) {
-          max-width: 345px;
+        @media (max-width: 470px) {
+          max-width: 425px;
           margin-left: 4px;
         }
-        @media (max-width: 387px) {
-          max-width: 352px;
+        @media (max-width: 425px) {
+          max-width: 390px;
+          margin-left: 4px;
+        }
+        @media (max-width: 390px) {
+          max-width: 350px;
           margin-left: 4px;
         }
       }
@@ -104,7 +114,7 @@
       margin-left: 8px;
 
       @media (max-width: 547px) {
-        top: 260px;
+        top: 320px;
       }
 
       img {
@@ -112,19 +122,23 @@
         width: 100%;
         margin: 0 auto;
         @media (max-width: 547px) {
-          max-width: 415px;
+          max-width: 500px;
           margin-left: 4px;
         }
-        @media (max-width: 420px) {
-          max-width: 370px;
+        @media (max-width: 510px) {
+          max-width: 460px;
           margin-left: 4px;
         }
-        @media (max-width: 378px) {
-          max-width: 345px;
+        @media (max-width: 470px) {
+          max-width: 425px;
           margin-left: 4px;
         }
-        @media (max-width: 387px) {
-          max-width: 352px;
+        @media (max-width: 425px) {
+          max-width: 390px;
+          margin-left: 4px;
+        }
+        @media (max-width: 390px) {
+          max-width: 350px;
           margin-left: 4px;
         }
       }
