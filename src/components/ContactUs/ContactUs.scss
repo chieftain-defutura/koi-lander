@@ -26,6 +26,9 @@
         font-size: 16px;
         color: var(--primaryText);
         font-family: var(--font-medium);
+        @media (max-width: 567px) {
+          font-size: 12px;
+        }
       }
 
       .grid-item {
@@ -53,6 +56,16 @@
           cursor: pointer;
           padding: 16px 24px;
           border: 1px solid #252525;
+          svg {
+            @media (max-width: 567px) {
+              width: 16px;
+            }
+          }
+          p {
+            @media (max-width: 567px) {
+              font-size: 12px;
+            }
+          }
         }
         .select-drop-down {
           background: #252525;
@@ -60,6 +73,9 @@
           border-radius: 5px;
           transition: all 0.5s ease-out;
           margin-top: 8px;
+          @media (max-width: 567px) {
+            padding: 6px 0px;
+          }
 
           p {
             font-size: 20px;
@@ -71,6 +87,24 @@
             &:hover {
               color: var(--primaryText);
             }
+            @media (max-width: 567px) {
+              font-size: 12px;
+              padding: 6px 16px;
+            }
+          }
+        }
+      }
+      .textarea-input {
+        textarea {
+          font-family: "Gilroy-Medium";
+          background-color: transparent;
+          border: 1px solid #252525;
+          width: 100%;
+          padding: 16px 24px;
+          color: #fff;
+          font-size: 16px;
+          @media (max-width: 567px) {
+            font-size: 12px;
           }
         }
       }
