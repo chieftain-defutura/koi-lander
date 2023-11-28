@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close.svg";
 import { ReactComponent as ChevronDown } from "../../assets/icons/chevronDown.svg";
 import { Form, Formik, Field, ErrorMessage } from "formik";
@@ -22,6 +22,17 @@ interface IContactUs {
 const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
   const [isActive, setIsActive] = useState(false);
   const [selectedSubject, setSelectedSubject] = useState("");
+  const [startAnimation, setStartAnimation] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setStartAnimation(true);
+    }, 1000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, []);
 
   const handleToggle = () => {
     setIsActive(!isActive);
@@ -36,9 +47,17 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
     <div className="modal-wrapper">
       <div className="modal-overlay" />
       <div className="modal-container">
-        <div className="contact-us">
+        <div className={startAnimation ? "contact-us active" : "contact-us"}>
           <div className="contact-us-container">
-            <div className="close-icon" onClick={() => setActive(false)}>
+            <div
+              className="close-icon"
+              onClick={() => {
+                setStartAnimation(false);
+                setTimeout(() => {
+                  setActive(false);
+                }, 1000);
+              }}
+            >
               <CloseIcon />
             </div>
 
