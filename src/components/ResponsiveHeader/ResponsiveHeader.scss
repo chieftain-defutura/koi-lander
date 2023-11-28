@@ -1,5 +1,8 @@
 .responsive-header-link {
-  position: relative;
+  position: fixed;
+  z-index: 2000;
+  width: 100%;
+  top: 0;
   background-color: var(--background);
   @media (min-width: 550px) {
     display: none;
@@ -16,8 +19,8 @@
     justify-content: center;
     gap: 24px;
     position: absolute;
-    left: 45%;
-    top: 30%;
+    left: 40%;
+    top: 25%;
   }
   .dropdown {
     img {
