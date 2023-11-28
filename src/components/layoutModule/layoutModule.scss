@@ -49,6 +49,9 @@
     width: 100%;
     max-height: 500px;
     height: 100%;
+    @media (max-width: 547px) {
+      height: 475px;
+    }
     .close-icon {
       display: flex;
       cursor: pointer;
