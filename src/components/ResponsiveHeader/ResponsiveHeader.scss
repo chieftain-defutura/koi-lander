@@ -15,11 +15,12 @@
   }
   .border {
     border-bottom: 1px solid #252525;
-    max-width: 280px;
-    width: 100%;
+    // max-width: 280px;
+    width: 85%;
     position: absolute;
     top: 68px;
-    left: 70px;
+    // left: 70px;
+    margin: 0 30px;
   }
   .link {
     display: flex;

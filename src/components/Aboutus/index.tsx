@@ -90,12 +90,39 @@ const Card: React.FC<ICard> = ({ Data }) => {
       onMouseLeave={handleMouseLeave}
     >
       <div className="founders">
-        <div>
-          <img
-            src={isHovered ? SecondCircle : FirstCircle}
-            alt=""
-            className="transition-image"
-          />
+        <div className="">
+          <div style={{ width: "300px", height: "300px" }}>
+            <img
+              src={FirstCircle}
+              alt=""
+              className="transition-image"
+              style={{
+                opacity: isHovered ? 0 : 1,
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+                objectFit: "contain",
+              }}
+            />
+          </div>
+          <div>
+            <img
+              src={SecondCircle}
+              alt=""
+              className="transition-image"
+              style={{
+                opacity: isHovered ? 1 : 0,
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
         </div>
         <div className="founder-image">
           <img src={Data.image} alt="" />
