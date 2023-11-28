@@ -26,7 +26,7 @@ const Hero: React.FC<IHero> = ({ open }) => {
     },
   };
   return (
-    <div style={{ marginTop: open ? "220px" : "117px" }}>
+    <div style={{ marginTop: open ? "270px" : "117px" }}>
       <div className="mx">
         <div className="hero-wrapper">
           <Swiper

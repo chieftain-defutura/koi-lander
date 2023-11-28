@@ -4,7 +4,6 @@
   width: 100%;
   top: 0;
   background-color: var(--background);
-  transition: all 0.3s ease-in-out;
   @media (min-width: 550px) {
     display: none;
   }
@@ -16,11 +15,12 @@
   }
   .border {
     border-bottom: 1px solid #252525;
-    max-width: 280px;
-    width: 100%;
+    // max-width: 280px;
+    width: 85%;
     position: absolute;
     top: 68px;
-    left: 70px;
+    // left: 70px;
+    margin: 0 30px;
   }
   .link {
     display: flex;
