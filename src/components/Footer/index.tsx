@@ -55,7 +55,6 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <div
-        // className="responsive"
         className={`responsive ${isHovered ? "hovered" : ""}`}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
