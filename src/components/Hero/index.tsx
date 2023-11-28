@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
     },
   };
   return (
-    <div style={{ marginTop: "117px" }}>
+    <div style={{ marginTop: "117px" }} id="home">
       <div className="mx">
         <div className="hero-wrapper">
           <Swiper

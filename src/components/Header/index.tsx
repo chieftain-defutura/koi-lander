@@ -28,10 +28,10 @@ const Header: React.FC = () => {
           <div className="header-content">
             <div className="header-link">
               <div>
-                <a href="/">Home</a>
+                <a href="#home">Home</a>
               </div>
               <div>
-                <a href="/">About us</a>
+                <a href="#about-us">About us</a>
               </div>
               <div onClick={() => setActive(true)}>
                 <p>Contact us</p>

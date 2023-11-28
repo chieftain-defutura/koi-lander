@@ -88,6 +88,7 @@ const Card: React.FC<ICard> = ({ Data }) => {
       className={`image-container ${isHovered ? "hovered" : ""}`}
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}
+      id="about-us"
     >
       <div className="founders">
         <div>
