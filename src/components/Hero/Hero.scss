@@ -5,9 +5,20 @@
 .slide {
   img {
     width: 100%;
+    @media (max-width: 550px) {
+      aspect-ratio: 1;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
-
+.hero-container {
+  // style={{ marginTop: "117px" }}
+  margin-top: 117px;
+  @media (max-width: 550px) {
+    margin-top: 101px;
+  }
+}
 .hero-wrapper {
   position: relative;
   .border {

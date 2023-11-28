@@ -4,6 +4,7 @@ import FirstCircle from "../../assets/images/dim-circle.png";
 import SecondCircle from "../../assets/images/glow-circle.png";
 import Girl from "../../assets/images/girl.png";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Data = [
   {
@@ -28,6 +29,12 @@ const Data = [
   },
 ];
 const AboutUs = () => {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return '<span class="' + className + '">' + (index + 1) + "</span>";
+    },
+  };
   return (
     <div className="aboutus-container">
       <div className="mx">
@@ -50,7 +57,12 @@ const AboutUs = () => {
               <Card Data={f} key={i} />
             ))}
           </div>
-          <Swiper slidesPerView={1} className="founder-wrapper">
+          <Swiper
+            pagination={pagination}
+            modules={[Autoplay, Pagination]}
+            slidesPerView={1}
+            className="founder-wrapper"
+          >
             {Data.map((f, i) => (
               <SwiperSlide key={i}>
                 <Card Data={f} />
@@ -88,6 +100,8 @@ const Card: React.FC<ICard> = ({ Data }) => {
       className={`image-container ${isHovered ? "hovered" : ""}`}
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleHover}
+      onTouchEnd={handleMouseLeave}
       id="about-us"
     >
       <div className="founders">
