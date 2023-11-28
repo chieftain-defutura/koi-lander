@@ -58,6 +58,10 @@ const AboutUs = () => {
             ))}
           </div>
           <Swiper
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             pagination={pagination}
             modules={[Autoplay, Pagination]}
             slidesPerView={1}
