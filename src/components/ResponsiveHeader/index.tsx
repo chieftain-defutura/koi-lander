@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "./ResponsiveHeader.scss";
 import DropDown from "../../assets/images/dropdown.png";
 import { ReactComponent as CloceIcon } from "../../assets/icons/close-circle.svg";
-import UnionTop from "../../assets/images/Union-top.png";
-import UnionBottom from "../../assets/images/Union-bottom.png";
 import LayoutModule from "../layoutModule";
 import ContactUs from "../ContactUs";
 
@@ -44,15 +42,15 @@ const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen, open }) => {
       </div>
       {active && (
         <div className="union-top-img-container">
-          <div className="union-top-img">
-            <img src={UnionTop} alt="" />
-          </div>
           <LayoutModule handleToggle={() => setActive(false)}>
+            {/* <div className="union-top-img">
+              <img src={UnionTop} alt="" />
+            </div> */}
             <ContactUs setActive={setActive} />
+            {/* <div className="union-bottom-img">
+              <img src={UnionBottom} alt="" />
+            </div> */}
           </LayoutModule>
-          <div className="union-bottom-img">
-            <img src={UnionBottom} alt="" />
-          </div>
         </div>
       )}
     </div>
