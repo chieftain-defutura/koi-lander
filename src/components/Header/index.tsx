@@ -48,15 +48,9 @@ const Header: React.FC<IHeader> = ({ setOpen }) => {
         </div>
         {active && (
           <div className="union-top-img-container">
-            <div className="union-top-img">
-              <img src={UnionTop} alt="" />
-            </div>
             <LayoutModule handleToggle={() => setActive(false)}>
               <ContactUs setActive={setActive} />
             </LayoutModule>
-            <div className="union-bottom-img">
-              <img src={UnionBottom} alt="" />
-            </div>
           </div>
         )}
       </div>

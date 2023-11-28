@@ -39,15 +39,15 @@ const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen }) => {
       </div>
       {active && (
         <div className="union-top-img-container">
-          <div className="union-top-img">
+          {/* <div className="union-top-img">
             <img src={UnionTop} alt="" />
-          </div>
+          </div> */}
           <LayoutModule handleToggle={() => setActive(false)}>
             <ContactUs setActive={setActive} />
           </LayoutModule>
-          <div className="union-bottom-img">
+          {/* <div className="union-bottom-img">
             <img src={UnionBottom} alt="" />
-          </div>
+          </div> */}
         </div>
       )}
     </div>
