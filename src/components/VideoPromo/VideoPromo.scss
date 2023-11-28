@@ -2,13 +2,16 @@
   padding: 64px;
 
   @media (max-width: 425px) {
-    padding: 24px;
+    padding: 64px 24px 0;
   }
   .head {
     h2 {
       font-family: var(--font-Exima);
       text-align: center;
       margin-bottom: 16px;
+    }
+    @media (max-width: 425px) {
+      margin-bottom: 32px;
     }
   }
   .video-promo-container {
