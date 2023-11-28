@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close.svg";
 import { ReactComponent as ChevronDown } from "../../assets/icons/chevronDown.svg";
-import { Form, Formik } from "formik";
+import { Form, Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { Field } from "formik";
 import "./ContactUs.scss";
 
 const initialValues = {
@@ -13,9 +12,6 @@ const initialValues = {
 };
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(3, "username must be at least 3 characters")
-    .required("Username is required"),
   email: Yup.string().email("Invalid email").required("Email is required"),
 });
 
@@ -58,6 +54,11 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
                     </div>
                     <div>
                       <Field name="email" placeholder="E-mail" type="email" />
+                      <ErrorMessage
+                        className="errorMsg"
+                        component="div"
+                        name="email"
+                      />
                     </div>
                   </div>
                   <div className="drop-down-wrapper">
@@ -106,6 +107,9 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
                       border: "1px solid #252525",
                       width: "100%",
                       padding: "16px 24px",
+                      color: "#fff",
+                      fontSize: "16px",
+                      fontFamily: "Gilroy-Medium",
                     }}
                   />
                   <div className="submit-btn">

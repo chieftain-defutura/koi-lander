@@ -5,6 +5,8 @@ import { ReactComponent as Hamburger } from "../../assets/icons/hamburger-menu.s
 import HeaderButton from "../../assets/images/Button.png";
 import LayoutModule from "../layoutModule";
 import ContactUs from "../ContactUs";
+import UnionTop from "../../assets/images/Union-top.png";
+import UnionBottom from "../../assets/images/Union-bottom.png";
 
 interface IHeader {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -41,9 +43,17 @@ const Header: React.FC<IHeader> = ({ setOpen }) => {
           </div>
         </div>
         {active && (
-          <LayoutModule handleToggle={() => setActive(false)}>
-            <ContactUs setActive={setActive} />
-          </LayoutModule>
+          <div className="union-top-img-container">
+            <div className="union-top-img">
+              <img src={UnionTop} alt="" />
+            </div>
+            <LayoutModule handleToggle={() => setActive(false)}>
+              <ContactUs setActive={setActive} />
+            </LayoutModule>
+            <div className="union-bottom-img">
+              <img src={UnionBottom} alt="" />
+            </div>
+          </div>
         )}
       </div>
     </div>
