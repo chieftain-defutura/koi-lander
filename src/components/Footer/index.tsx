@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ReactComponent as FooterBgImg } from "../../assets/images/footer-bg-img.svg";
 import { ReactComponent as FooterLogo } from "../../assets/logo/footer-logo.svg";
 import { ReactComponent as InstaIcon } from "../../assets/icons/insta.svg";
@@ -8,10 +8,21 @@ import ResponsiveFooterLogo from "../../assets/images/responsive.png";
 import InstaImg from "../../assets/icons/insta.png";
 import FaceBookImg from "../../assets/icons/facebook.png";
 import TwitterImg from "../../assets/icons/twitter.png";
-
+import FooterLight from "../../assets/images/footer-light.png";
+import FooterImg from "../../assets/images/footer-bg.png";
 import "./Footer.scss";
 
 const Footer: React.FC = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleHover = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
   return (
     <>
       <div className="footer-wrapper">
@@ -43,8 +54,16 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="responsive">
+      <div
+        // className="responsive"
+        className={`responsive ${isHovered ? "hovered" : ""}`}
+        onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className="responsive-img">
+          <div className="footer-light-img">
+            <img src={isHovered ? FooterLight : FooterImg} alt="" />
+          </div>
           <div className="responsive-container">
             <div className="footer-logo-responsive">
               <img src={ResponsiveFooterLogo} alt="" />
