@@ -58,6 +58,8 @@ const Footer: React.FC = () => {
         className={`responsive ${isHovered ? "hovered" : ""}`}
         onMouseEnter={handleHover}
         onMouseLeave={handleMouseLeave}
+        onTouchStart={handleHover}
+        onTouchEnd={handleMouseLeave}
       >
         <div className="responsive-img">
           <div className="footer-light-img">
