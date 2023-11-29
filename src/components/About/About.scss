@@ -92,8 +92,8 @@
     background-attachment: fixed;
     width: 100%;
     padding: 64px;
-    // overflow-y: scroll;
-    // height: 480px;
+    overflow-y: scroll;
+    height: 480px;
     @media (max-width: 1024px) {
       height: 330px;
     }
@@ -121,6 +121,7 @@
       grid-template-columns: 1fr 1fr;
       place-items: center;
       padding-bottom: 33px;
+
       @media (max-width: 1024px) {
         gap: 32px;
       }

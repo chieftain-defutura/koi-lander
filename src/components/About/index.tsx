@@ -13,7 +13,7 @@ const About: React.FC = () => {
   };
 
   return (
-    <div className={`about-wrapper ${expanded ? "expanded" : "add"}`}>
+    <div className="about-wrapper">
       <div className="mx">
         <div className="rectangle-img">
           <img src={RectangleImg} alt="" />
@@ -25,10 +25,13 @@ const About: React.FC = () => {
           </div>
         </div>
         <div
-          className="background-img"
+          className={`background-img ${expanded ? "expanded" : "add"}`}
+          // className="background-img"
           ref={backgroundRef}
           style={{
-            height: expanded ? `${backgroundRef.current?.scrollHeight}px` : "0",
+            height: expanded
+              ? `${backgroundRef.current?.scrollHeight}px`
+              : "480px",
             transition: "all 0.5s ease-out",
           }}
         >
