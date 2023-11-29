@@ -25,14 +25,14 @@ const About: React.FC = () => {
           </div>
         </div>
         <div
-          className={`background-img ${expanded ? "expanded" : "add"}`}
-          // className="background-img"
+          className={`background-img ${expanded ? "expanded" : ""}`}
           ref={backgroundRef}
           style={{
             height: expanded
               ? `${backgroundRef.current?.scrollHeight}px`
               : "480px",
             transition: "all 0.5s ease-out",
+            overflowY: "hidden",
           }}
         >
           <div>
