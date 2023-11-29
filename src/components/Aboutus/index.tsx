@@ -52,7 +52,13 @@ const AboutUs = () => {
               ex ea commodo consequat.
             </p>
           </div>
-          <div className="founder-container">
+          <div
+            className="founder-container"
+            style={{
+              justifyContent: window.innerWidth >= 1300 ? "center" : "normal",
+              overflowX: window.innerWidth >= 1300 ? "auto" : "scroll",
+            }}
+          >
             {Data.map((f, i) => (
               <Card Data={f} key={i} />
             ))}
