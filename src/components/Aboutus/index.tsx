@@ -36,7 +36,7 @@ const AboutUs = () => {
     },
   };
   return (
-    <div className="aboutus-container">
+    <div className="aboutus-container" id="about">
       <div className="mx">
         <div className="aboutus-wrapper">
           <div className="aboutus-content">

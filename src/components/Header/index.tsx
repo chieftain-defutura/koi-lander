@@ -31,7 +31,7 @@ const Header: React.FC = () => {
                 <a href="#home">Home</a>
               </div>
               <div>
-                <a href="#about-us">About us</a>
+                <a href="#about">About us</a>
               </div>
               <div onClick={() => setActive(true)}>
                 <p>Contact us</p>

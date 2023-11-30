@@ -30,7 +30,7 @@ const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen, open }) => {
           <a href="#home">Home</a>
         </div>
         <div onClick={() => setOpen(false)}>
-          <a href="#about-us">About us</a>
+          <a href="#about">About us</a>
         </div>
         <div onClick={() => [setActive(true), setOpen(false)]}>
           <p>Contact us</p>
