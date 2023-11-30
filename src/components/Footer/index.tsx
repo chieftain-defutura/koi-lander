@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <>
+    <div>
       <div className="footer-wrapper">
         <div className="mx">
           <div className="footer-container">
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
