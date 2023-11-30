@@ -123,13 +123,7 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
                     </div>
                     <div className="drop-down-wrapper">
                       <div className="flex-item" onClick={handleToggle}>
-                        <p
-                          className={
-                            selectedSubject === "Partnership related"
-                              ? "activeColor"
-                              : ""
-                          }
-                        >
+                        <p style={{ color: selectedSubject ? "#fff" : "#444" }}>
                           {selectedSubject ? selectedSubject : "Subject"}
                         </p>
                         <ChevronDown
