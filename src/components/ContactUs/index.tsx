@@ -23,6 +23,7 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
   const [isActive, setIsActive] = useState(false);
   const [selectedSubject, setSelectedSubject] = useState("");
   const [startAnimation, setStartAnimation] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   console.log("selectedSubject", selectedSubject);
 
   useEffect(() => {
@@ -47,6 +48,7 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
     console.log("selectedSubject", selectedSubject);
 
     try {
+      setIsSubmitting(true);
       const emailParams = {
         to_email: "samdezero.official@gmail.com",
         subject: "Logged user details",
@@ -64,12 +66,13 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
         "pqtVAdxhIAV80mS2m"
       );
       console.log("Email sent", response);
-
+      setIsSubmitting(false);
       console.log(values);
       setActive(false);
     } catch (error) {
       console.log(error);
       setActive(false);
+      setIsSubmitting(false);
     }
   };
 
@@ -170,7 +173,9 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
                       />
                     </div>
                     <div className="submit-btn">
-                      <button>Submit</button>
+                      <button type="submit" disabled={isSubmitting}>
+                        {isSubmitting ? "Submitting..." : "Submit"}
+                      </button>
                     </div>
                   </Form>
                 )}
