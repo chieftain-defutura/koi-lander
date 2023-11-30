@@ -7,9 +7,11 @@ import "./About.scss";
 const About: React.FC = () => {
   const backgroundRef = useRef<HTMLDivElement>(null);
   const [expanded, setExpanded] = useState(false);
+  const [arrowRotation, setArrowRotation] = useState("");
 
   const handleArrowClick = () => {
     setExpanded(!expanded);
+    setArrowRotation(expanded ? "" : "rotated");
   };
 
   return (
@@ -20,7 +22,10 @@ const About: React.FC = () => {
         </div>
         <div onClick={handleArrowClick}>
           <div className="border-radius"></div>
-          <div className="arrow-img">
+          <div
+            onClick={handleArrowClick}
+            className={`arrow-img ${arrowRotation}`}
+          >
             <img src={Arrow} alt="" />
           </div>
         </div>

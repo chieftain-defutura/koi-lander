@@ -135,3 +135,9 @@ p {
   overflow-y: scroll;
   height: 480px;
 }
+
+.rotated {
+  img {
+    transform: rotate(-180deg);
+  }
+}
