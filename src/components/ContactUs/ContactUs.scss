@@ -102,7 +102,9 @@
         cursor: pointer;
         padding: 8px;
         justify-content: flex-end;
-        margin: 12px;
+        // margin: 12px;
+        margin-top: 12px;
+        margin-right: -10px;
       }
       @media (max-width: 768px) {
         padding: 18px;
@@ -139,6 +141,7 @@
             width: 100%;
             font-size: 16px;
             color: var(--primaryText);
+            outline: none;
             font-family: var(--font-medium);
             @media (max-width: 567px) {
               font-size: 12px;
@@ -218,6 +221,7 @@
               padding: 16px 24px;
               color: #fff;
               font-size: 16px;
+              outline: none;
               @media (max-width: 567px) {
                 font-size: 12px;
               }
@@ -232,6 +236,7 @@
             width: 96%;
             padding: 16px 24px;
             margin: 40px 10px;
+            cursor: pointer;
             @media (max-width: 547px) {
               margin-bottom: 32px;
               margin-top: 28px;

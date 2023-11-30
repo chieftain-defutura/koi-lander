@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { ReactComponent as CloseIcon } from "../../assets/icons/close.svg";
 import { ReactComponent as ChevronDown } from "../../assets/icons/chevronDown.svg";
 import { Form, Formik, Field, ErrorMessage } from "formik";
+import emailjs from "@emailjs/browser";
 import * as Yup from "yup";
 import "./ContactUs.scss";
 
 const initialValues = {
   name: "",
   email: "",
-  subject: "",
 };
 
 const validationSchema = Yup.object().shape({
@@ -23,6 +23,7 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
   const [isActive, setIsActive] = useState(false);
   const [selectedSubject, setSelectedSubject] = useState("");
   const [startAnimation, setStartAnimation] = useState(false);
+  console.log("selectedSubject", selectedSubject);
 
   useEffect(() => {
     document.body.style.overflowY = "hidden";
@@ -41,6 +42,36 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
       clearTimeout(timeout);
     };
   }, []);
+
+  const handleSubmit = async (values: typeof initialValues) => {
+    console.log("selectedSubject", selectedSubject);
+
+    try {
+      const emailParams = {
+        to_email: "samdezero.official@gmail.com",
+        subject: "Logged user details",
+        message: `${values.name}, 
+          ${values.email},
+           subject:${selectedSubject}`,
+        from_name: values.name,
+        to_name: "sam",
+      };
+
+      const response = await emailjs.send(
+        "service_7nhbz4t",
+        "template_99oh9j8",
+        emailParams,
+        "pqtVAdxhIAV80mS2m"
+      );
+      console.log("Email sent", response);
+
+      console.log(values);
+      setActive(false);
+    } catch (error) {
+      console.log(error);
+      setActive(false);
+    }
+  };
 
   const handleToggle = () => {
     setIsActive(!isActive);
@@ -73,7 +104,7 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
               <Formik
                 initialValues={initialValues}
                 validationSchema={validationSchema}
-                onSubmit={(values: any) => console.log(values)}
+                onSubmit={handleSubmit}
               >
                 {() => (
                   <Form>
@@ -92,7 +123,15 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
                     </div>
                     <div className="drop-down-wrapper">
                       <div className="flex-item" onClick={handleToggle}>
-                        <p>{selectedSubject ? selectedSubject : "Subject"}</p>
+                        <p
+                          className={
+                            selectedSubject === "Partnership related"
+                              ? "activeColor"
+                              : ""
+                          }
+                        >
+                          {selectedSubject ? selectedSubject : "Subject"}
+                        </p>
                         <ChevronDown
                           className={`drop-down-icon ${
                             isActive ? "rotate" : ""
