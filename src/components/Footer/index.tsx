@@ -37,10 +37,7 @@ const Footer: React.FC = () => {
                 <div className="footer-logo">
                   <FooterLogo />
                 </div>
-                <p>
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </p>
+                <p>The Metaverse’s first ever casino.</p>
                 <div className="copyright">
                   <h4>Copyright © 2022 Sprin Verse ® All right reserved</h4>
                 </div>
@@ -70,10 +67,7 @@ const Footer: React.FC = () => {
               <img src={ResponsiveFooterLogo} alt="" />
             </div>
 
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <p>The Metaverse’s first ever casino.</p>
             <div className="social-media-icons">
               <img src={InstaImg} alt="" />
               <img src={FaceBookImg} alt="" />

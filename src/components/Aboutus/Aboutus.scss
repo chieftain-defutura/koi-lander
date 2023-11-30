@@ -13,12 +13,13 @@
       max-width: 1152px;
       width: 100%;
       margin: 0 auto;
+      margin-top: 12px;
     }
     .founder-container {
       display: flex;
       flex-direction: row;
       gap: 30px;
-      padding-top: 32px;
+      padding-top: 38px;
 
       &::-webkit-scrollbar {
         display: none;

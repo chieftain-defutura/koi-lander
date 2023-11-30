@@ -40,16 +40,16 @@ const AboutUs = () => {
       <div className="mx">
         <div className="aboutus-wrapper">
           <div className="aboutus-content">
-            <h1>About us</h1>
+            <h1>About Us</h1>
             <p>
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua."Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua."Lorem ipsum
-              dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat.
+              Koi Club is a virtual world featuring six distinct floors from the
+              Lounge to the Sports deck, E-cafe, Casino Royale, Poker Club, and
+              Penthouse, each floor crafted with exceptional graphics and
+              distinct features to ensure an unforgettable experience. Here, the
+              user will find an immersive atmosphere by personalizing the
+              avatars,interacting with various items and exploring six different
+              games tailored with unique specifications, where users can place
+              bets and engage in thrilling gameplay within the metaverse.
             </p>
           </div>
           <div
