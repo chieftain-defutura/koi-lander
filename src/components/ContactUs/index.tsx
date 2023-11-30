@@ -25,6 +25,14 @@ const ContactUs: React.FC<IContactUs> = ({ setActive }) => {
   const [startAnimation, setStartAnimation] = useState(false);
 
   useEffect(() => {
+    document.body.style.overflowY = "hidden";
+
+    return () => {
+      document.body.style.overflowY = "auto";
+    };
+  }, []);
+
+  useEffect(() => {
     const timeout = setTimeout(() => {
       setStartAnimation(true);
     }, 1000);
