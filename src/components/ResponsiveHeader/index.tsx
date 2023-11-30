@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./ResponsiveHeader.scss";
 import DropDown from "../../assets/images/dropdown.png";
 import { ReactComponent as CloceIcon } from "../../assets/icons/close-circle.svg";
+import { ReactComponent as HeaderLogo } from "../../assets/logo/header-logo.svg";
 import ContactUs from "../ContactUs";
 
 interface IResponsiveHeader {
@@ -17,13 +18,6 @@ const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen, open }) => {
         open ? "responsive-header-link active" : "responsive-header-link"
       }
     >
-      <div
-        className="close"
-        onClick={() => setOpen(false)}
-        style={{ cursor: "pointer" }}
-      >
-        <CloceIcon />
-      </div>
       <div className="border"></div>
       <div className="link">
         <div onClick={() => setOpen(false)}>
@@ -38,6 +32,16 @@ const ResponsiveHeader: React.FC<IResponsiveHeader> = ({ setOpen, open }) => {
       </div>
       <div className="dropdown">
         <img src={DropDown} alt="" />
+      </div>
+      <div
+        className="close"
+        onClick={() => setOpen(false)}
+        style={{ cursor: "pointer" }}
+      >
+        <CloceIcon />
+      </div>
+      <div className="koi-logo">
+        <HeaderLogo />
       </div>
       {active && <ContactUs setActive={setActive} />}
     </div>
