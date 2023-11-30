@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ReactComponent as HeaderLogo } from "../../assets/logo/header-logo.svg";
 import { ReactComponent as Hamburger } from "../../assets/icons/hamburger-menu.svg";
 import HeaderButton from "../../assets/images/Button.png";
@@ -9,6 +9,17 @@ import "./Header.scss";
 const Header: React.FC = () => {
   const [active, setActive] = useState(false);
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflowY = "hidden";
+
+      return () => {
+        document.body.style.overflowY = "auto";
+      };
+    }
+  }, [open]);
+
   return (
     <div className="header-container">
       <div className="mx">
@@ -47,6 +58,8 @@ const Header: React.FC = () => {
             <ContactUs setActive={setActive} />
           </div>
         )}
+        {open && <div className="layout"></div>}
+
         <ResponsiveHeader setOpen={setOpen} open={open} />
       </div>
     </div>

@@ -20,7 +20,7 @@
   }
   .close {
     position: absolute;
-    bottom: -52px;
+    bottom: -56px;
     left: 48%;
     right: 50%;
     transform: translate(-50%, -50%);
@@ -31,16 +31,19 @@
     position: absolute;
     top: 68px;
     margin: 0 30px;
+    padding-top: 13px;
   }
   .koi-logo {
     position: absolute;
-    left: 44%;
+    left: 41%;
     right: 50%;
     top: 40px;
     transform: translate(-50%, -50%);
+    padding-top: 10px;
+
     svg {
-      width: 64px;
-      height: 40px;
+      width: 100px;
+      height: 60px;
     }
   }
   .link {
@@ -51,8 +54,8 @@
     gap: 24px;
     position: absolute;
     left: 40%;
-    top: 25%;
-    margin-top: 28px;
+    top: 30%;
+    margin-top: 32px;
     a {
       font-size: 16px;
       cursor: pointer;
