@@ -21,12 +21,13 @@ const About: React.FC = () => {
           <img src={RectangleImg} alt="" />
         </div>
         <div onClick={handleArrowClick}>
-          <div className="border-radius"></div>
-          <div
-            onClick={handleArrowClick}
-            className={`arrow-img ${arrowRotation}`}
-          >
-            <img src={Arrow} alt="" />
+          <div className="border-radius">
+            <div
+              onClick={handleArrowClick}
+              className={`arrow-img ${arrowRotation}`}
+            >
+              <img src={Arrow} alt="" />
+            </div>
           </div>
         </div>
         <div
