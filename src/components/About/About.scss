@@ -3,23 +3,23 @@
   margin-top: 14px;
   .rectangle-img {
     position: absolute;
-    bottom: -50px;
+    bottom: -30px;
     left: 0;
     right: 0;
 
-    img {
+    svg {
       width: 100%;
     }
-    @media (max-width: 762px) {
-      bottom: -28px;
-    }
-    @media (max-width: 500px) {
-      bottom: -20px;
-    }
+    // @media (max-width: 762px) {
+    //   bottom: -26px;
+    // }
+    // @media (max-width: 500px) {
+    //   bottom: -20px;
+    // }
   }
   .border-radius {
     position: absolute;
-    bottom: -50px;
+    bottom: -70px;
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
@@ -32,10 +32,10 @@
     background: #090909;
     cursor: pointer;
     @media (max-width: 1050px) {
-      bottom: -65px;
-    }
-    @media (max-width: 762px) {
       bottom: -60px;
+    }
+    @media (max-width: 536px) {
+      bottom: -48px;
     }
   }
   .arrow-img {

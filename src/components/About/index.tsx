@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { AboutData } from "../../data/aboutData";
-import RectangleImg from "../../assets/images/Rectangle.png";
+import { ReactComponent as RectangleImg } from "../../assets/images/Rectangle.svg";
 import Arrow from "../../assets/images/arrow.png";
 import "./About.scss";
 
@@ -18,7 +18,7 @@ const About: React.FC = () => {
     <div className="about-wrapper">
       <div className="mx">
         <div className="rectangle-img">
-          <img src={RectangleImg} alt="" />
+          <RectangleImg />
         </div>
         <div onClick={handleArrowClick}>
           <div className="border-radius">
