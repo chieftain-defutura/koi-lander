@@ -36,7 +36,7 @@ const About: React.FC = () => {
           style={{
             height: expanded
               ? `${backgroundRef.current?.scrollHeight}px`
-              : "480px",
+              : "440px",
             transition: "all 0.5s ease-out",
             overflowY: "hidden",
           }}
